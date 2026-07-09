@@ -1,6 +1,6 @@
-# 🤖 Intelligent Agent Platform
+# 🤖 Enterprise AI Agents
 
-An enterprise-grade AI platform for building, orchestrating, and managing intelligent agents that automate complex business workflows, integrate with enterprise systems, and accelerate decision-making through modern Large Language Models (LLMs).
+An enterprise-grade AI platform for orchestrating intelligent agents, automating complex business workflows, integrating enterprise systems, and accelerating decision-making through modern Large Language Models (LLMs).
 
 Designed with scalability, security, and extensibility in mind, the platform provides a modular architecture for AI-powered automation, multi-agent collaboration, cloud-native deployment, and enterprise integrations.
 
@@ -10,11 +10,11 @@ Designed with scalability, security, and extensibility in mind, the platform pro
 
 - 🤖 AI Agent Orchestration
 - 🧠 Multi-Agent Collaboration
-- 💬 LLM Integration (OpenAI, Anthropic & compatible providers)
+- 💬 LLM Integration (OpenAI & compatible providers)
 - 🔄 Intelligent Workflow Automation
-- 🔐 Authentication & Role-Based Access Control
+- 🔐 Authentication & Role-Based Access Control (RBAC)
 - 📂 Knowledge Base & Document Processing
-- ⚡ Real-time Task Execution
+- ⚡ Real-Time Task Execution
 - 📊 Monitoring & Execution Analytics
 - 🌐 REST API & Enterprise Integrations
 - 🧩 Modular Plugin Architecture
@@ -25,11 +25,11 @@ Designed with scalability, security, and extensibility in mind, the platform pro
 
 ## 🏗 Architecture
 
-```
+```text
 Frontend (React + TypeScript)
-            │
- REST / WebSocket APIs
-            │
+             │
+     REST / WebSocket APIs
+             │
 ────────────────────────────────────
  Node.js + TypeScript Backend
 ────────────────────────────────────
@@ -38,16 +38,16 @@ Frontend (React + TypeScript)
 ├── Workflow Engine
 ├── Prompt Management
 ├── Task Scheduler
-├── Knowledge Retrieval
-├── Authentication
+├── Knowledge Processing
+├── Authentication & RBAC
 ├── Monitoring
 └── Integration Layer
-            │
+             │
 ────────────────────────────────────
-PostgreSQL • Redis • Vector Storage
-            │
+ PostgreSQL • Redis • Vector Database
+             │
 ────────────────────────────────────
- OpenAI • Anthropic • Enterprise APIs
+ LLM Providers • Enterprise APIs • External Services
 ```
 
 ---
@@ -67,26 +67,28 @@ PostgreSQL • Redis • Vector Storage
 - TypeScript
 - Hono
 - REST APIs
+- WebSockets
 
 ### AI
 
 - OpenAI API
-- Anthropic API
 - AI Agents
 - Prompt Engineering
 - Workflow Automation
+- Function Calling
 
-### Cloud
+### Cloud & DevOps
 
+- AWS
 - Docker
 - Kubernetes
-- AWS
 - GitHub Actions
 
 ### Database
 
 - PostgreSQL
 - Redis
+- Vector Database
 
 ### Validation
 
@@ -102,36 +104,37 @@ PostgreSQL • Redis • Vector Storage
 - Request Validation
 - Audit Logging
 - Permission Management
+- Environment-based Configuration
 
 ---
 
 ## 📊 Core Modules
 
-### Agent Management
+### 🤖 Agent Management
 
-Create, configure and manage intelligent AI agents with customizable behaviors and execution policies.
+Create, configure, and manage intelligent AI agents with customizable behaviors, execution policies, and reusable workflows.
 
-### Workflow Engine
+### 🔄 Workflow Engine
 
-Build automated workflows that coordinate multiple AI agents, external APIs and enterprise services.
+Design and execute automated workflows that coordinate multiple AI agents, external APIs, and enterprise services.
 
-### Knowledge Processing
+### 🧠 Knowledge Processing
 
-Process documents, retrieve contextual information and provide AI-powered responses using structured knowledge.
+Process documents, retrieve contextual information, and generate AI-powered responses using structured knowledge.
 
-### Enterprise Integrations
+### 🔌 Enterprise Integrations
 
-Connect with internal systems, CRMs, cloud services and third-party APIs.
+Integrate with internal systems, third-party services, cloud platforms, and business applications.
 
-### Monitoring
+### 📈 Monitoring
 
-Track workflow execution, agent performance, system health and operational metrics.
+Track workflow execution, agent performance, system health, execution history, and operational metrics.
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 src/
 ├── agents/
 ├── workflows/
@@ -150,28 +153,42 @@ docs/
 
 ## 🚀 Getting Started
 
-### Clone
+### Clone the repository
 
 ```bash
-git clone https://github.com/kaltramuho/intelligent-agent-platform.git
+git clone https://github.com/kaltramuho/enterprise-ai-agents.git
 ```
 
-### Install
+### Navigate to the project
+
+```bash
+cd enterprise-ai-agents
+```
+
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### Run
+### Start the development server
 
 ```bash
 npm run dev
 ```
 
-### Build
+### Build for production
 
 ```bash
 npm run build
+```
+
+---
+
+## 🐳 Docker
+
+```bash
+docker compose up --build
 ```
 
 ---
@@ -183,9 +200,10 @@ npm run build
 - Internal Knowledge Assistants
 - Document Intelligence
 - Business Process Automation
-- AI-powered Internal Tools
+- AI-Powered Internal Tools
 - Operations Automation
 - Multi-Agent Collaboration
+- Enterprise AI Assistants
 
 ---
 
@@ -193,15 +211,43 @@ npm run build
 
 - Enterprise-ready architecture
 - AI-first design
-- Cloud-native deployment
-- Modular and extensible
+- Modular and extensible platform
 - High-performance TypeScript backend
-- Production-ready API architecture
-- Scalable workflow execution
+- Cloud-native deployment
+- Secure authentication and authorization
+- Production-ready REST APIs
+- Scalable workflow orchestration
 - Modern developer experience
+
+---
+
+## 🛠 Development
+
+### Requirements
+
+- Node.js 18+
+- npm 10+
+- Docker (optional)
+
+### Scripts
+
+```bash
+npm run dev      # Development
+npm run build    # Production build
+npm run test     # Run tests
+npm run lint     # Lint project
+```
 
 ---
 
 ## 📄 License
 
-MIT
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Kaltra Muho**
+
+Senior Full-Stack Software Engineer specializing in enterprise applications, cloud-native systems, AI-powered solutions, and modern TypeScript development.
